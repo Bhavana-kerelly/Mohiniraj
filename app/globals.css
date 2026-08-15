@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #F6F2EA;
+  --bg-sand: #E9E0D2;
+  --color-charcoal: #292925;
+  --color-brown: #6E6255;
+  --color-champagne: #B6A47C;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-manrope: 'Manrope', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--color-charcoal);
+  font-family: var(--font-manrope);
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #B6A47C;
+  color: #F6F2EA;
+}
+
+/* Warm Frosted Light Glassmorphism */
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(41, 41, 37, 0.1);
+  box-shadow: 0 10px 30px rgba(41, 41, 37, 0.04);
+}
+
+.glass-panel-light-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-light-hover:hover {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(182, 164, 124, 0.4);
+  box-shadow: 0 20px 40px rgba(41, 41, 37, 0.08);
+}
+
+/* Dark Section Glass */
+.glass-panel-dark {
+  background: rgba(41, 41, 37, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.font-editorial {
+  font-family: var(--font-cormorant);
+  letter-spacing: -0.01em;
+}
+
+/* Lenis smooth scrolling styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F2EA;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(182, 164, 124, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(182, 164, 124, 0.8);
+}
